@@ -6,7 +6,7 @@ import Details from './components/Details';
 import Footer from './components/Footer';
 import useScrollAnimation from './hooks/useScrollAnimation';
 import About from './components/About';
-import Skills from './components/skills';
+import Skills from './components/Skills';
 
 function App() {
   useScrollAnimation();
