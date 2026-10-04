@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bun Sothearak — Software Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        crimson: {
+                            DEFAULT: '#DC2626',
+                            dark: '#B91C1C',
+                            bright: '#EF4444',
+                            glow: 'rgba(220, 38, 38, 0.25)',
+                        },
+                        darkbg: '#0A0A0A',
+                        darkcard: '#121212',
+                        darkborder: '#222222',
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        handwriting: ['Caveat', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Playfair+Display:ital@1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #070707;
+            color: #E5E7EB;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Light Mode Overrides */
+        html:not(.dark) body {
+            background-color: #F8FAF9;
+            color: #111827;
+        }
+
+        html:not(.dark) .bg-darkcard {
+            background-color: #FFFFFF;
+        }
+
+        html:not(.dark) .border-darkborder {
+            border-color: #E5E7EB;
+        }
+
+        html:not(.dark) .text-gray-400 {
+            color: #4B5563;
+        }
+
+        /* Giant Watermark Text styling */
+        .giant-watermark {
+            font-size: clamp(5rem, 18vw, 19rem);
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            line-height: 0.8;
+            color: transparent;
+            -webkit-text-stroke: 1.5px #DC2626;
+            opacity: 0.85;
+            text-transform: uppercase;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        html:not(.dark) .giant-watermark {
+            -webkit-text-stroke: 1.5px #B91C1C;
+            opacity: 0.25;
+        }
+
+        /* Smooth scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0A0A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #DC2626;
+            border-radius: 4px;
+        }
+        
+        /* Modal Transitions */
+        .modal-backdrop {
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="min-h-screen selection:bg-red-600 selection:text-white relative">
+
+    <!-- TOP HEADER -->
+    <header class="w-full max-w-7xl mx-auto px-4 md:px-8 pt-6 pb-2 flex justify-between items-center text-xs font-semibold tracking-wider text-gray-400 uppercase border-b border-gray-800/50">
+        <div class="flex items-center gap-2">
+            <span class="inline-block w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
+            <span class="text-gray-300 dark:text-gray-300">SOFTWARE DEVELOPMENT STUDENT</span>
+        </div>
+        
+        <div class="flex items-center gap-4">
+            <button id="themeToggle" class="p-2 rounded-full border border-gray-800 hover:border-red-600 transition-colors text-gray-300 hover:text-red-500" title="Toggle Theme">
+                <i class="fa-solid fa-moon dark:hidden"></i>
+                <i class="fa-solid fa-sun hidden dark:inline"></i>
+            </button>
+            <div class="flex items-center gap-1.5 text-red-500 font-bold">
+                <span>AVAILABLE FOR OPPORTUNITIES</span>
+                <i class="fa-solid fa-sparkles text-xs"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative max-w-7xl mx-auto px-4 md:px-8 pt-8 pb-16 overflow-hidden">
+        
+        <!-- Giant "PORTFOLIO" Backdrop Text -->
+        <div class="absolute inset-x-0 top-6 flex justify-center z-0">
+            <h1 class="giant-watermark font-black tracking-tighter">PORTFOLIO</h1>
+        </div>
+
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end pt-12 md:pt-20">
+            
+            <!-- Left Info Column -->
+            <div class="lg:col-span-5 space-y-6">
+                <div>
+                    <span class="font-handwriting text-3xl md:text-4xl text-red-500 block mb-1">Hello, I'm</span>
+                    <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white dark:text-white uppercase leading-none">
+                        BUN <br><span class="text-red-600">SOTHEARAK</span>
+                    </h1>
+                </div>
+
+                <div class="space-y-3">
+                    <h2 class="text-xs md:text-sm font-bold tracking-widest text-red-500 uppercase">
+                        FULL STACK & FLUTTER DEVELOPER
+                    </h2>
+                    <p class="text-xs md:text-sm text-gray-400 leading-relaxed max-w-md">
+                        Fourth-year Software Development student at <strong class="text-gray-200">Norton University</strong> in Phnom Penh. Passionate about building modern mobile & web applications with clean architecture, smooth UI interactions, and robust API backends.
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-3 pt-2">
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-950/40 border border-red-800/60 text-xs font-semibold text-red-400">
+                        <i class="fa-solid fa-location-dot"></i> PHNOM PENH, CAMBODIA
+                    </span>
+                    <button onclick="openModal('cvModal')" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-600 hover:bg-red-700 text-white text-xs font-bold transition-transform active:scale-95 shadow-lg shadow-red-900/30">
+                        <i class="fa-solid fa-download"></i> VIEW RESUME
+                    </button>
+                </div>
+            </div>
+
+            <!-- Center Cut-out Image Box -->
+            <div class="lg:col-span-4 flex justify-center relative my-6 lg:my-0">
+                <div class="relative w-64 md:w-80 h-80 md:h-[420px] rounded-2xl bg-gradient-to-b from-red-950/40 via-darkcard to-black border border-red-900/40 shadow-2xl overflow-hidden group">
+                    <!-- Glowing aura -->
+                    <div class="absolute -inset-1 bg-gradient-to-r from-red-600 to-rose-900 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
+                    
+                    <!-- Avatar Image -->
+                    <div class="relative h-full w-full flex items-end justify-center">
+                        <!-- <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80"  -->
+                        <img src="./src/assets/image.png" 
+                             alt="Bun Sothearak" 
+                             class="h-[95%] object-cover object-top grayscale hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    </div>
+
+                    <!-- Subtle Badge overlay -->
+                    <div class="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-md p-3 rounded-xl border border-red-900/30 flex items-center justify-between text-xs">
+                        <span class="text-gray-300 font-medium"><i class="fa-solid fa-graduation-cap text-red-500 mr-1.5"></i> Norton University</span>
+                        <span class="text-red-500 font-bold">Year 4</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Callout & Stats Column -->
+            <div class="lg:col-span-3 space-y-8 flex flex-col justify-between">
+                <!-- Quote callout -->
+                <div class="p-4 rounded-xl bg-darkcard border border-darkborder relative">
+                    <div class="w-7 h-7 rounded-full bg-red-600/20 border border-red-500 flex items-center justify-center text-red-500 mb-2">
+                        <i class="fa-solid fa-asterisk text-xs"></i>
+                    </div>
+                    <p class="text-xs text-gray-300 font-medium leading-relaxed">
+                        Turning backend logic into seamless, high-performance digital mobile & web experiences.
+                    </p>
+                </div>
+
+                <!-- Numerical Stats -->
+                <div class="space-y-5 border-t border-gray-800/80 pt-6">
+                    <div class="flex items-baseline justify-between">
+                        <span class="text-3xl md:text-4xl font-extrabold text-red-500">Year 4</span>
+                        <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider text-right">SOFTWARE DEV<br>DEGREE</span>
+                    </div>
+                    <div class="flex items-baseline justify-between border-t border-gray-900 pt-3">
+                        <span class="text-3xl md:text-4xl font-extrabold text-red-500">03+</span>
+                        <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider text-right">CORE ACADEMIC<br>PROJECTS</span>
+                    </div>
+                    <div class="flex items-baseline justify-between border-t border-gray-900 pt-3">
+                        <span class="text-3xl md:text-4xl font-extrabold text-red-500">10+</span>
+                        <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider text-right">TECH STACK<br>TOOLS</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SELECTED PROJECTS SECTION -->
+    <section class="max-w-7xl mx-auto px-4 md:px-8 py-12 border-t border-gray-900">
+        <div class="flex justify-between items-end mb-8">
+            <h2 class="text-lg md:text-xl font-extrabold tracking-wider text-white dark:text-white uppercase">
+                SELECTED PROJECTS
+            </h2>
+            <a href="#contact" class="text-xs font-bold text-gray-400 hover:text-red-500 transition-colors uppercase flex items-center gap-2">
+                VIEW ALL PROJECTS <i class="fa-solid fa-arrow-right text-red-500"></i>
+            </a>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Project 01 -->
+            <div class="group bg-darkcard rounded-2xl border border-darkborder hover:border-red-600/50 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+                <div class="p-4">
+                    <div class="relative h-48 rounded-xl overflow-hidden bg-gray-900 mb-4 border border-gray-800">
+                        <img src="https://images.unsplash.com/photo-1556742049-0a670f4a4591?auto=format&fit=crop&w=800&q=80" 
+                             alt="POS Mobile App" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-red-600 text-white text-[10px] font-black px-2 py-1 rounded tracking-widest uppercase">
+                            MOBILE APP
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-3xl font-black text-red-600">01</span>
+                        <div class="flex gap-1.5">
+                            <span class="text-[10px] bg-red-950/60 border border-red-900/50 text-red-400 px-2 py-0.5 rounded">Flutter</span>
+                            <span class="text-[10px] bg-gray-800 text-gray-300 px-2 py-0.5 rounded">Laravel</span>
+                            <span class="text-[10px] bg-gray-800 text-gray-300 px-2 py-0.5 rounded">MySQL</span>
+                        </div>
+                    </div>
+
+                    <h3 class="text-base font-bold text-white group-hover:text-red-500 transition-colors mb-1">
+                        ONLINE POS MOBILE APP
+                    </h3>
+                    <p class="text-xs text-gray-400 line-clamp-2">
+                        Cross-platform Point of Sale mobile client powered by Laravel REST API backend, supporting inventory management and transaction receipts.
+                    </p>
+                </div>
+
+                <div class="px-4 pb-4 pt-2 border-t border-gray-900 flex justify-between items-center text-xs text-gray-400">
+                    <span class="font-semibold text-gray-500">ACADEMIC CAPSTONE</span>
+                    <button onclick="openProjectModal('Online POS Mobile App', 'A comprehensive point-of-sale solution featuring real-time inventory synchronization, barcode scanner integration, order processing, and sales report generation.', ['Flutter', 'Dart', 'Laravel REST API', 'MySQL', 'Git'])" 
+                            class="text-red-500 hover:text-red-400 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        DETAILS <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 02 -->
+            <div class="group bg-darkcard rounded-2xl border border-darkborder hover:border-red-600/50 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+                <div class="p-4">
+                    <div class="relative h-48 rounded-xl overflow-hidden bg-gray-900 mb-4 border border-gray-800">
+                        <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80" 
+                             alt="Computer E-Commerce Website" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-red-600 text-white text-[10px] font-black px-2 py-1 rounded tracking-widest uppercase">
+                            WEB APPLICATION
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-3xl font-black text-red-600">02</span>
+                        <div class="flex gap-1.5">
+                            <span class="text-[10px] bg-red-950/60 border border-red-900/50 text-red-400 px-2 py-0.5 rounded">PHP</span>
+                            <span class="text-[10px] bg-gray-800 text-gray-300 px-2 py-0.5 rounded">Laravel</span>
+                            <span class="text-[10px] bg-gray-800 text-gray-300 px-2 py-0.5 rounded">JS</span>
+                        </div>
+                    </div>
+
+                    <h3 class="text-base font-bold text-white group-hover:text-red-500 transition-colors mb-1">
+                        COMPUTER E-COMMERCE SITE
+                    </h3>
+                    <p class="text-xs text-gray-400 line-clamp-2">
+                        Feature-rich web store for tech hardware with cart management, admin dashboard for inventory, and customer user authorization.
+                    </p>
+                </div>
+
+                <div class="px-4 pb-4 pt-2 border-t border-gray-900 flex justify-between items-center text-xs text-gray-400">
+                    <span class="font-semibold text-gray-500">WEB DEVELOPMENT</span>
+                    <button onclick="openProjectModal('Computer E-Commerce Web Platform', 'E-Commerce system tailored for computer hardware stores. Features product filter search, custom shopping cart logic, order fulfillment workflow, and MySQL database management.', ['Laravel', 'PHP', 'JavaScript', 'HTML5/Tailwind', 'MySQL'])" 
+                            class="text-red-500 hover:text-red-400 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        DETAILS <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 03 -->
+            <div class="group bg-darkcard rounded-2xl border border-darkborder hover:border-red-600/50 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+                <div class="p-4">
+                    <div class="relative h-48 rounded-xl overflow-hidden bg-gray-900 mb-4 border border-gray-800">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" 
+                             alt="REST API Backend Architecture" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-red-600 text-white text-[10px] font-black px-2 py-1 rounded tracking-widest uppercase">
+                            BACKEND ARCHITECTURE
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-3xl font-black text-red-600">03</span>
+                        <div class="flex gap-1.5">
+                            <span class="text-[10px] bg-red-950/60 border border-red-900/50 text-red-400 px-2 py-0.5 rounded">REST API</span>
+                            <span class="text-[10px] bg-gray-800 text-gray-300 px-2 py-0.5 rounded">Docker</span>
+                            <span class="text-[10px] bg-gray-800 text-gray-300 px-2 py-0.5 rounded">Git</span>
+                        </div>
+                    </div>
+
+                    <h3 class="text-base font-bold text-white group-hover:text-red-500 transition-colors mb-1">
+                        API & DATABASE SUITE
+                    </h3>
+                    <p class="text-xs text-gray-400 line-clamp-2">
+                        Secure RESTful backend microservices designed for seamless database operations and containerized deployment workflow.
+                    </p>
+                </div>
+
+                <div class="px-4 pb-4 pt-2 border-t border-gray-900 flex justify-between items-center text-xs text-gray-400">
+                    <span class="font-semibold text-gray-500">SYSTEM ARCHITECTURE</span>
+                    <button onclick="openProjectModal('API & Database Management Suite', 'High performance REST API service templates built with PHP Laravel and containerized using Docker for scalable app integration.', ['PHP', 'Laravel REST API', 'Docker', 'MySQL', 'Postman'])" 
+                            class="text-red-500 hover:text-red-400 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        DETAILS <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EDUCATION, SKILLS, PROCESS & QUOTE GRID SECTION -->
+    <section class="max-w-7xl mx-auto px-4 md:px-8 py-12 border-t border-gray-900">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- Column 1: Education & Skills -->
+            <div class="lg:col-span-4 space-y-8">
+                <div>
+                    <h2 class="text-base font-extrabold tracking-wider text-white uppercase mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap text-red-600"></i> EDUCATION
+                    </h2>
+                    <div class="bg-darkcard p-4 rounded-xl border border-darkborder space-y-4">
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-sm font-bold text-white">B.Sc. in Software Development</h3>
+                                <span class="text-[10px] font-bold text-red-500 bg-red-950/60 px-2 py-0.5 rounded">2021 - Present</span>
+                            </div>
+                            <p class="text-xs text-gray-400 font-medium">Norton University, Phnom Penh</p>
+                            <p class="text-[11px] text-gray-500 mt-1">Focus on Object-Oriented Programming, Database Design, Mobile Apps & Web Engineering.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-base font-extrabold tracking-wider text-white uppercase mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-code text-red-600"></i> TECH SKILLS
+                    </h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-darkcard border border-darkborder text-xs text-gray-300 font-semibold hover:border-red-600 hover:text-red-500 transition-colors">Flutter</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-darkcard border border-darkborder text-xs text-gray-300 font-semibold hover:border-red-600 hover:text-red-500 transition-colors">Dart</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-darkcard border border-darkborder text-xs text-gray-300 font-semibold hover:border-red-600 hover:text-red-500 transition-colors">Laravel</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-darkcard border border-darkborder text-xs text-gray-300 font-semibold hover:border-red-600 hover:text-red-500 transition-colors">PHP</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-darkcard border border-darkborder text-xs text-gray-300 font-semibold hover:border-red-600 hover:text-red-500 transition-colors">REST API</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-darkcard border border-darkborder text-xs text-gray-300 font-semibold hover:border-red-600 hover:text-red-500 transition-colors">MySQL</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-darkcard border border-darkborder text-xs text-gray-300 font-semibold hover:border-red-600 hover:text-red-500 transition-colors">JavaScript</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-darkcard border border-darkborder text-xs text-gray-300 font-semibold hover:border-red-600 hover:text-red-500 transition-colors">HTML / CSS</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-darkcard border border-darkborder text-xs text-gray-300 font-semibold hover:border-red-600 hover:text-red-500 transition-colors">Git / GitHub</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-darkcard border border-darkborder text-xs text-gray-300 font-semibold hover:border-red-600 hover:text-red-500 transition-colors">Docker</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Development Process Timeline -->
+            <div class="lg:col-span-5">
+                <h2 class="text-base font-extrabold tracking-wider text-white uppercase mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-list-check text-red-600"></i> WORK PROCESS
+                </h2>
+                
+                <div class="space-y-4 relative before:absolute before:inset-0 before:left-5 before:w-0.5 before:bg-gray-800">
+                    
+                    <!-- Step 1 -->
+                    <div class="relative flex items-start gap-4 group">
+                        <div class="w-10 h-10 rounded-full bg-darkcard border border-red-600/60 group-hover:bg-red-600 text-red-500 group-hover:text-white flex items-center justify-center font-bold text-xs shrink-0 z-10 transition-colors">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="bg-darkcard p-3.5 rounded-xl border border-darkborder w-full">
+                            <span class="text-[10px] font-bold text-red-500 block uppercase">01 — DISCOVER</span>
+                            <h3 class="text-xs font-bold text-white mb-0.5">Requirement Analysis</h3>
+                            <p class="text-[11px] text-gray-400">Understanding project objectives, user flows, and technical requirements.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative flex items-start gap-4 group">
+                        <div class="w-10 h-10 rounded-full bg-darkcard border border-red-600/60 group-hover:bg-red-600 text-red-500 group-hover:text-white flex items-center justify-center font-bold text-xs shrink-0 z-10 transition-colors">
+                            <i class="fa-solid fa-sitemap"></i>
+                        </div>
+                        <div class="bg-darkcard p-3.5 rounded-xl border border-darkborder w-full">
+                            <span class="text-[10px] font-bold text-red-500 block uppercase">02 — ARCHITECTURE</span>
+                            <h3 class="text-xs font-bold text-white mb-0.5">Database & API Design</h3>
+                            <p class="text-[11px] text-gray-400">Structuring clean relational schemas in MySQL and defining RESTful endpoints.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative flex items-start gap-4 group">
+                        <div class="w-10 h-10 rounded-full bg-darkcard border border-red-600/60 group-hover:bg-red-600 text-red-500 group-hover:text-white flex items-center justify-center font-bold text-xs shrink-0 z-10 transition-colors">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div class="bg-darkcard p-3.5 rounded-xl border border-darkborder w-full">
+                            <span class="text-[10px] font-bold text-red-500 block uppercase">03 — DEVELOP</span>
+                            <h3 class="text-xs font-bold text-white mb-0.5">Frontend & Mobile Build</h3>
+                            <p class="text-[11px] text-gray-400">Coding cross-platform UI with Flutter and web interfaces with Laravel & Tailwind.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative flex items-start gap-4 group">
+                        <div class="w-10 h-10 rounded-full bg-darkcard border border-red-600/60 group-hover:bg-red-600 text-red-500 group-hover:text-white flex items-center justify-center font-bold text-xs shrink-0 z-10 transition-colors">
+                            <i class="fa-solid fa-vial-circle-check"></i>
+                        </div>
+                        <div class="bg-darkcard p-3.5 rounded-xl border border-darkborder w-full">
+                            <span class="text-[10px] font-bold text-red-500 block uppercase">04 — TEST & DEPLOY</span>
+                            <h3 class="text-xs font-bold text-white mb-0.5">Integration & Refinement</h3>
+                            <p class="text-[11px] text-gray-400">Testing API payloads, debugging UI states, and preparing container deployment.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Column 3: Crimson Quote Block -->
+            <div class="lg:col-span-3 flex flex-col">
+                <div class="h-full bg-gradient-to-b from-red-700 to-red-900 rounded-2xl p-6 text-white flex flex-col justify-between relative overflow-hidden shadow-xl">
+                    <div class="text-red-300 text-5xl font-serif leading-none opacity-50 mb-2">“</div>
+                    <p class="text-sm md:text-base font-semibold leading-relaxed relative z-10">
+                        Good software isn't just about making code work—it's about creating reliable architecture, maintainable systems, and intuitive user experiences.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-red-500/40 relative z-10">
+                        <div class="font-handwriting text-2xl text-red-200">Bun Sothearak</div>
+                        <span class="text-[10px] uppercase font-bold text-red-300 tracking-wider">LET'S CREATE SOMETHING GREAT TOGETHER</span>
+                    </div>
+                    <!-- Background Glow accent -->
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-red-500/20 rounded-full blur-2xl"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LET'S WORK TOGETHER / CONTACT FOOTER -->
+    <section id="contact" class="max-w-7xl mx-auto px-4 md:px-8 py-12 border-t border-gray-900">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Contact Left info & CTA -->
+            <div class="lg:col-span-6 space-y-6">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white uppercase leading-tight">
+                        LET'S WORK <br><span class="text-red-600">TOGETHER ✦</span>
+                    </h2>
+                    <p class="text-xs md:text-sm text-gray-400 mt-2 max-w-md">
+                        Currently looking for Software Development internships, junior developer roles, and technical project collaborations. Let's build something extraordinary.
+                    </p>
+                </div>
+
+                <!-- Contact List -->
+                <div class="space-y-3">
+                    <a href="mailto:contact@sothearak.dev" class="flex items-center gap-3 p-3 rounded-xl bg-darkcard border border-darkborder hover:border-red-600 transition-colors group">
+                        <div class="w-8 h-8 rounded-lg bg-red-950/60 border border-red-800/60 flex items-center justify-center text-red-500 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-envelope text-xs"></i>
+                        </div>
+                        <span class="text-xs font-semibold text-gray-300 group-hover:text-white">bunsothearak.dev@gmail.com</span>
+                    </a>
+
+                    <a href="https://github.com" target="_blank" class="flex items-center gap-3 p-3 rounded-xl bg-darkcard border border-darkborder hover:border-red-600 transition-colors group">
+                        <div class="w-8 h-8 rounded-lg bg-red-950/60 border border-red-800/60 flex items-center justify-center text-red-500 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                            <i class="fa-brands fa-github text-xs"></i>
+                        </div>
+                        <span class="text-xs font-semibold text-gray-300 group-hover:text-white">github.com/bunsothearak</span>
+                    </a>
+
+                    <div class="flex items-center gap-3 p-3 rounded-xl bg-darkcard border border-darkborder">
+                        <div class="w-8 h-8 rounded-lg bg-red-950/60 border border-red-800/60 flex items-center justify-center text-red-500">
+                            <i class="fa-solid fa-location-dot text-xs"></i>
+                        </div>
+                        <span class="text-xs font-semibold text-gray-300">Phnom Penh, Cambodia</span>
+                    </div>
+                </div>
+
+                <button onclick="openModal('contactModal')" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-red-900/40 active:scale-95">
+                    SEND A DIRECT MESSAGE <i class="fa-solid fa-paper-plane ml-2"></i>
+                </button>
+            </div>
+
+            <!-- Laptop Preview Graphic -->
+            <div class="lg:col-span-6 flex justify-center">
+                <div class="relative w-full max-w-lg bg-darkcard rounded-2xl border border-darkborder p-4 shadow-2xl overflow-hidden">
+                    <!-- Top Browser Bar -->
+                    <div class="flex items-center justify-between pb-3 border-b border-gray-800">
+                        <div class="flex items-center gap-1.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+                        </div>
+                        <span class="text-[10px] font-mono text-gray-500">sothearak-workspace.dev</span>
+                    </div>
+
+                    <!-- Code Snippet Box -->
+                    <div class="pt-4 font-mono text-xs text-gray-300 space-y-2 bg-black/60 p-4 rounded-lg border border-gray-900 mt-3">
+                        <p class="text-gray-500">// Bun Sothearak - Developer Profile</p>
+                        <p><span class="text-red-500">const</span> <span class="text-yellow-400">developer</span> = {</p>
+                        <p class="pl-4"><span class="text-gray-400">name:</span> <span class="text-green-400">'Bun Sothearak'</span>,</p>
+                        <p class="pl-4"><span class="text-gray-400">university:</span> <span class="text-green-400">'Norton University'</span>,</p>
+                        <p class="pl-4"><span class="text-gray-400">degree:</span> <span class="text-green-400">'Software Development (Yr 4)'</span>,</p>
+                        <p class="pl-4"><span class="text-gray-400">coreStack:</span> [<span class="text-green-400">'Flutter'</span>, <span class="text-green-400">'Laravel'</span>, <span class="text-green-400">'MySQL'</span>],</p>
+                        <p class="pl-4"><span class="text-gray-400">status:</span> <span class="text-red-400">'Ready for Hiring'</span></p>
+                        <p>};</p>
+                    </div>
+
+                    <div class="mt-4 p-3 bg-red-950/30 border border-red-900/40 rounded-lg flex items-center justify-between">
+                        <span class="text-xs font-semibold text-red-300">Looking for an enthusiastic junior developer?</span>
+                        <button onclick="openModal('contactModal')" class="text-[10px] bg-red-600 text-white font-bold px-3 py-1 rounded hover:bg-red-500 transition-colors">
+                            GET IN TOUCH
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-12 pt-6 border-t border-gray-900 flex flex-col sm:flex-row justify-between items-center text-[11px] text-gray-500">
+            <p>© 2026 Bun Sothearak. All rights reserved.</p>
+            <p>Norton University Software Development Portfolio</p>
+        </div>
+    </section>
+
+    <!-- PROJECT DETAILS MODAL -->
+    <div id="projectModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 modal-backdrop">
+        <div class="bg-darkcard border border-red-900/60 rounded-2xl max-w-lg w-full p-6 shadow-2xl relative">
+            <button onclick="closeModal('projectModal')" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            
+            <h3 id="modalTitle" class="text-lg font-bold text-white mb-2"></h3>
+            <p id="modalDescription" class="text-xs text-gray-300 mb-4 leading-relaxed"></p>
+            
+            <div id="modalTechStack" class="flex flex-wrap gap-1.5 mb-6"></div>
+
+            <div class="flex justify-end gap-3 border-t border-gray-800 pt-4">
+                <button onclick="closeModal('projectModal')" class="px-4 py-2 rounded-lg bg-gray-800 text-gray-300 text-xs font-semibold hover:bg-gray-700">
+                    Close
+                </button>
+                <button onclick="closeModal('projectModal')" class="px-4 py-2 rounded-lg bg-red-600 text-white text-xs font-semibold hover:bg-red-700">
+                    Close Preview
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- RESUME MODAL -->
+    <div id="cvModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 modal-backdrop">
+        <div class="bg-darkcard border border-red-900/60 rounded-2xl max-w-md w-full p-6 shadow-2xl relative">
+            <button onclick="closeModal('cvModal')" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            
+            <div class="text-center space-y-3">
+                <div class="w-12 h-12 rounded-full bg-red-600/20 text-red-500 mx-auto flex items-center justify-center text-xl border border-red-500">
+                    <i class="fa-solid fa-file-pdf"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white">Bun Sothearak - Resume</h3>
+                <p class="text-xs text-gray-400">Fourth-year Software Development Student Resume (Norton University)</p>
+                
+                <div class="p-3 bg-black/50 rounded-xl text-left text-xs space-y-1.5 border border-gray-800">
+                    <p><strong class="text-gray-300">Degree:</strong> B.Sc. Software Development</p>
+                    <p><strong class="text-gray-300">Specialization:</strong> Mobile Apps (Flutter) & Web (Laravel, PHP)</p>
+                    <p><strong class="text-gray-300">Location:</strong> Phnom Penh, Cambodia</p>
+                </div>
+
+                <div class="pt-2">
+                    <button onclick="alert('Resume download initiated!'); closeModal('cvModal');" class="w-full py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold transition-all">
+                        <i class="fa-solid fa-download mr-1.5"></i> DOWNLOAD PDF CV
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT FORM MODAL -->
+    <div id="contactModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 modal-backdrop">
+        <div class="bg-darkcard border border-red-900/60 rounded-2xl max-w-lg w-full p-6 shadow-2xl relative">
+            <button onclick="closeModal('contactModal')" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            
+            <h3 class="text-lg font-bold text-white mb-1">Send Message to Sothearak</h3>
+            <p class="text-xs text-gray-400 mb-4">Leave your message and contact info below.</p>
+            
+            <form onsubmit="handleFormSubmit(event)" class="space-y-3">
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-300 uppercase mb-1">Your Name</label>
+                    <input type="text" required placeholder="e.g. Sokha" class="w-full px-3 py-2 rounded-lg bg-black border border-gray-800 text-xs text-white focus:outline-none focus:border-red-600">
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-300 uppercase mb-1">Email Address</label>
+                    <input type="email" required placeholder="name@example.com" class="w-full px-3 py-2 rounded-lg bg-black border border-gray-800 text-xs text-white focus:outline-none focus:border-red-600">
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-300 uppercase mb-1">Message</label>
+                    <textarea rows="3" required placeholder="How can Bun Sothearak help with your project?" class="w-full px-3 py-2 rounded-lg bg-black border border-gray-800 text-xs text-white focus:outline-none focus:border-red-600"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold transition-all mt-2">
+                    SEND MESSAGE
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Theme Toggle Logic
+        const themeToggleBtn = document.getElementById('themeToggle');
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        // Generic Modal Helpers
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+
+        // Project Modal Dynamic Population
+        function openProjectModal(title, description, tags) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDescription').innerText = description;
+            
+            const tagsContainer = document.getElementById('modalTechStack');
+            tagsContainer.innerHTML = '';
+            tags.forEach(tag => {
+                const badge = document.createElement('span');
+                badge.className = 'text-[10px] bg-red-950/60 border border-red-900/50 text-red-400 px-2 py-0.5 rounded';
+                badge.innerText = tag;
+                tagsContainer.appendChild(badge);
+            });
+
+            openModal('projectModal');
+        }
+
+        // Handle Contact Form Submit
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            closeModal('contactModal');
+            
+            // Notification Banner
+            const banner = document.createElement('div');
+            banner.className = 'fixed bottom-5 right-5 bg-red-600 text-white px-4 py-3 rounded-xl shadow-2xl text-xs font-bold z-50 flex items-center gap-2';
+            banner.innerHTML = '<i class="fa-solid fa-circle-check"></i> Message sent successfully to Bun Sothearak!';
+            document.body.appendChild(banner);
+            
+            setTimeout(() => {
+                banner.remove();
+            }, 4000);
+        }
+    </script>
+</body>
+</html>

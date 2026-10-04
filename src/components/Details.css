@@ -1,0 +1,136 @@
+.details-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 4rem;
+  border-top: 1px solid #222;
+}
+
+.details-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.edu-item h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.edu-item p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.edu-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: #555;
+  border-bottom: 1px solid #222;
+  padding-bottom: 0.5rem;
+}
+
+.skills-section h4 {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  border: 1px solid #333;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Process List */
+.process-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.process-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  border-bottom: 1px solid #222;
+  padding-bottom: 1rem;
+}
+
+.process-id {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+}
+
+.process-icon {
+  color: #555;
+}
+
+.process-text h5 {
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.process-text p {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Quote Column */
+.quote-col {
+  background-color: #1a0505; /* Dark red tint */
+  padding: 2rem;
+  position: relative;
+}
+
+.quote-mark {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  color: var(--accent-red);
+  line-height: 1;
+  display: block;
+  margin-bottom: -1rem;
+}
+
+.quote-text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.signature {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.quote-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  border-top: 1px solid #331111;
+  padding-top: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .details-section {
+    grid-template-columns: 1fr;
+  }
+}
