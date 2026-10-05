@@ -1,5 +1,6 @@
 import React from 'react';
 import './Hero.css';
+import heroImage from '../assets/profile-hero.jpg';
 
 const Hero = () => {
   return (
@@ -25,16 +26,17 @@ const Hero = () => {
             BUN
           </h1>
           <h3 className="hero-role">
-            Software Developer &<br />
-            <span className="accent-text">UI/UX Creator</span>
+            Software &<br />
+            <span className="accent-text">Developer</span>
           </h3>
           <p className="hero-desc">
-            I specialize in crafting visually stunning and user-friendly digital
-            experiences. With a passion for design and a keen eye for detail, I
-            bring ideas to life through innovative web solutions.
+            I am a passionate software developer with a strong foundation in
+            computer science. I specialize in creating innovative and efficient
+            solutions that drive results. My goal is to turn ideas into powerful
+            digital experiences.
           </p>
           <div className="availability">
-            <span className="dot"></span> Available Worldwide
+            <span className="dot"></span> Available for Internship
           </div>
         </div>
 
@@ -45,7 +47,9 @@ const Hero = () => {
         >
           {/* Note: In a real project, this would be a transparent PNG of the person */}
           <img
-            src="https://scontent.fpnh10-1.fna.fbcdn.net/v/t39.30808-6/627465091_2099235664184643_948556413980685940_n.jpg?stp=dst-jpg_tt6&cstp=mx960x958&ctp=s960x958&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=h1nmBdrVMGkQ7kNvwH-38aa&_nc_oc=AdpHuJNaIM_UdljbQDW2mCWEPnSQX4P4SncUrah4NlDj-caQzGETFFAew6f8MvL5wZ8&_nc_zt=23&_nc_ht=scontent.fpnh10-1.fna&_nc_gid=SsFL0G7T0nntPRi-egNr_A&_nc_ss=7b2a8&oh=00_AQNqq9ZGhvHYzYP8jzFgwKihAKXYvL_-itEAaXoGocQGuQ&oe=6AC52248"
+          // src='https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop'
+            // src="https://scontent.fpnh10-1.fna.fbcdn.net/v/t39.30808-6/627465091_2099235664184643_948556413980685940_n.jpg?stp=dst-jpg_tt6&cstp=mx960x958&ctp=s960x958&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=h1nmBdrVMGkQ7kNvwH-38aa&_nc_oc=AdpHuJNaIM_UdljbQDW2mCWEPnSQX4P4SncUrah4NlDj-caQzGETFFAew6f8MvL5wZ8&_nc_zt=23&_nc_ht=scontent.fpnh10-1.fna&_nc_gid=SsFL0G7T0nntPRi-egNr_A&_nc_ss=7b2a8&oh=00_AQNqq9ZGhvHYzYP8jzFgwKihAKXYvL_-itEAaXoGocQGuQ&oe=6AC52248"
+            src={heroImage}
             alt="Sotherak Bun"
             className="hero-image"
           />
@@ -71,12 +75,12 @@ const Hero = () => {
                 <br />
                 Software Development Student at
                 <br />
-               <span className="accent-text ">NORTON University</span>
+                <span className="accent-text ">NORTON University</span>
               </p>
             </div>
             <div className="stat-item stagger-item">
               <h2>
-                40<span className="accent-text">+</span>
+                4<span className="accent-text">+</span>
               </h2>
               <p>
                 Projects
@@ -84,7 +88,7 @@ const Hero = () => {
                 Completed
               </p>
             </div>
-            <div className="stat-item stagger-item">
+            {/* <div className="stat-item stagger-item">
               <h2>
                 20<span className="accent-text">+</span>
               </h2>
@@ -93,7 +97,7 @@ const Hero = () => {
                 <br />
                 Clients
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

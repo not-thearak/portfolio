@@ -65,8 +65,8 @@ const Skills = () => {
       <div className="currently-learning">
         <div className="learning-dot"></div>
         <p>
-          <span className="learning-label">Currently Learning:</span> 
-          Flutter, Dart, and Advanced React Patterns
+          <span className="learning-label">Currently Developing:</span> 
+           Demo Movie App khfullhd with Flutter and Dart
         </p>
       </div>
     </section>

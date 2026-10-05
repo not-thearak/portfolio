@@ -30,7 +30,7 @@ const Footer = () => {
           </li>
           <li className="stagger-item">
             <span className="icon">🌐</span>
-            <a href="http://www.bunthearak.com">www.bunthearak.com</a>
+            <a href="https://thearak.netlify.app/" target='_blank'>thearak.netlify.app</a>
           </li>
           <li className="stagger-item">
             <span className="icon">📞</span>

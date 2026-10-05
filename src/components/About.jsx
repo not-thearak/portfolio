@@ -25,7 +25,7 @@ const About = () => {
               0<span className="accent-text">+</span>
             </h2>
             <p>
-              Years of
+              Year of
               <br />
               Experience
             </p>
@@ -35,7 +35,7 @@ const About = () => {
         {/* Right Side: Text */}
         <div className="about-text">
           <h2 className="about-heading">
-            I'M A PASSIONATE <span className="accent-text">DESIGNER</span> BASED
+            I'M A PASSIONATE <span className="accent-text">DEVELOP</span> BASED
             IN PHNOM PENH.
           </h2>
 

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const useScrollAnimation = (options = {}) => {
+const useScrollAnimation = (locationKey = '', options = {}) => {
   const {
     threshold = 0.1,
     rootMargin = '0px 0px -80px 0px',
@@ -30,7 +30,9 @@ const useScrollAnimation = (options = {}) => {
       elements.forEach((el) => observer.unobserve(el));
       observer.disconnect();
     };
-  }, [threshold, rootMargin]);
+  }, [threshold, rootMargin, locationKey]);
+
+  return null;
 };
 
 export default useScrollAnimation;
