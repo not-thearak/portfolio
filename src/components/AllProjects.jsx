@@ -13,6 +13,12 @@ const AllProjects = () => {
 
   return (
     <section className="container projects-section">
+       <button
+         className="back-button"
+         onClick={() => navigate('/')}
+         aria-label="Back to home" >
+         <span className="back-arrow">←</span>
+       </button>
       <div className="section-title">
         <h3>All Projects</h3>
       </div>

@@ -20,7 +20,7 @@ const skillsData = [
     id: '03',
     title: 'Tools',
     description: 'The software I use daily to bring ideas to life.',
-    skills: ['Figma', 'Framer', 'Webflow', 'Adobe XD', 'Photoshop', 'VS Code'],
+    skills: ['Figma', 'VS Code', 'Git', 'GitHub', 'Postman', 'Navicat', 'Wamp'],
     icon: '⚙'
   }
 ];

@@ -25,8 +25,11 @@ const projectsData = [
   'Local Storage'
 ],
     tech: ['Flutter', 'Dart', 'Laravel', 'MySQL', 'RESTful APIs'],
-    links: { github: 'https://github.com/not-thearak/pos-mobile', live: 'https://mini-phone-store.com' },
-    live: 'Download Apk'
+    links: {
+      github: 'https://github.com/not-thearak/pos-mobile',
+      apk: 'https://github.com/not-thearak/pos-mobile/releases/latest',
+    },
+    live: 'Download Apk',
   },
   {
     id: '02',
@@ -41,8 +44,8 @@ const projectsData = [
       'Crud operations for products and categories',
       'Dashboard for admin to manage orders and inventory',
     ],
-    tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Laravel', 'MySQL'],
-    links: { github: 'https://github.com/thearak/computer-shop', live: 'https://computer-shop-demo.vercel.app' }
+    tech: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'PHP', 'Laravel', 'MySQL'],
+    links: { github: 'https://github.com/not-thearak/Computer-shop', live: 'https://computer-shop-demo.vercel.app' }
   },
   {
     id: '03',
@@ -60,7 +63,8 @@ const projectsData = [
     ],
     tech: ['Flutter', 'Dart'],
     links: { github: 'https://github.com/thearak/urbanic', live: 'https://urbanic-magazine.vercel.app' }
-  }
+  },
+
 ];
 
 export const getProjectById = (id) => projectsData.find((p) => p.id === id);

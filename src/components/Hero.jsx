@@ -26,8 +26,8 @@ const Hero = () => {
             BUN
           </h1>
           <h3 className="hero-role">
-            Software &<br />
-            <span className="accent-text">Developer</span>
+            Software Developer &<br />
+            <span className="accent-text">Student</span>
           </h3>
           <p className="hero-desc">
             I am a passionate software developer with a strong foundation in

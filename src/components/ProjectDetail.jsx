@@ -94,14 +94,14 @@ const ProjectDetail = () => {
 
           {project.links && (
             <div className="project-detail-links">
-              {project.links.live && (
+              {project.links.apk && (
                 <a
-                  href={project.links.live}
+                  href={project.links.apk}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="detail-link-btn"
                 >
-                  {project.live} <span>↗</span>
+                  {project.live || 'Download APK'} <span>↗</span>
                 </a>
               )}
               {project.links.github && (
