@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import aboutImg from '../assets/angkor.jpg';
 
 const About = () => {
   return (
@@ -16,7 +17,7 @@ const About = () => {
         <div className="about-image-wrapper">
           {/* Using a placeholder image - replace with your own */}
           <img
-            src="https://scontent.fpnh10-1.fna.fbcdn.net/v/t39.30808-6/776747179_2260461498062058_4325057480577346673_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ab9ZAqznVm8Q7kNvwFN4QOl&_nc_oc=AdrwW_DAx64drlslBioynQdxgpdhtzAQxcOHfUxsSbup4SAPq93WPKW0C0QQThRRBpk&_nc_zt=23&_nc_ht=scontent.fpnh10-1.fna&_nc_gid=yWqyeEYsV3o6n7L3BiqHqA&_nc_ss=7b2a8&oh=00_AQPKKmTEHmQlBeocToQtDPnWlAluxqPVZVmBqVSHSM0ttA&oe=6AC45B8F"
+            src={aboutImg}
             alt="Rayhan Aditya working"
             className="about-image"
           />
