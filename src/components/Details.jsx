@@ -32,7 +32,7 @@ const Details = () => {
             
             <div className="edu-meta">
               <span>Etec Center </span>
-              <span>2018 - 2022</span>
+              <span>2022 - 2023</span>
             </div>
           </div>
         </div>
