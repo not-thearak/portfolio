@@ -12,7 +12,7 @@ const Navbar = () => {
         <span style={{ color: 'var(--accent-red)' }}>Developer</span>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-        <span>Available for internships</span>
+        <span>Available for Work</span>
         <span style={{ color: 'var(--accent-red)', fontSize: '1.2rem' }}>+</span>
       </div>
     </nav>
