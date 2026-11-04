@@ -36,7 +36,7 @@ const Hero = () => {
             digital experiences.
           </p>
           <div className="availability">
-            <span className="dot"></span> Available for Internship
+            <span className="dot"></span> Available for Work
           </div>
         </div>
 
@@ -62,8 +62,10 @@ const Hero = () => {
         >
           <div className="hero-quote">
             <span className="star">✦</span>
-            <p>Turning ideas into powerful digital experiences.</p>
-          </div>
+            <p>
+
+            </p>
+          </div>  
 
           <div className="stats-container stagger">
             <div className="stat-item stagger-item">

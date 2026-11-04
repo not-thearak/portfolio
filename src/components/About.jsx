@@ -23,20 +23,26 @@ const About = () => {
           />
           <div className="experience-badge">
             <h2>
+              About 
+            </h2>
+            <p>
+              me
+            </p>
+            {/* <h2>
               0<span className="accent-text">+</span>
             </h2>
             <p>
               Year of
               <br />
               Experience
-            </p>
+            </p> */}
           </div>
         </div>
 
         {/* Right Side: Text */}
         <div className="about-text">
           <h2 className="about-heading">
-            I'M A PASSIONATE <span className="accent-text">DEVELOP</span> BASED
+            I'M A PASSIONATE <span className="accent-text">SOFTWARE DEVELOPER</span> BASED
             IN PHNOM PENH.
           </h2>
 

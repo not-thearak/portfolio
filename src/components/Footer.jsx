@@ -11,10 +11,10 @@ const Footer = () => {
       >
         <h2 className="footer-title">LET'S WORK<br/>TOGETHER <span className="accent-text">+</span></h2>
         <p className="footer-desc">
-          I'm currently open for new projects and collaborations. Let's create something amazing that drives results.
+          I am currently open to internship opportunities and collaborations. If you have a project in mind or would like to discuss potential opportunities, please feel free to reach out to me. I am eager to contribute my skills and learn from real-world experiences.
         </p>
         <div className="availability" style={{ marginTop: '2rem' }}>
-          <span className="dot"></span> Available for Internship
+          <span className="dot"></span> Available for Work
         </div>
       </div>
 
@@ -51,7 +51,9 @@ const Footer = () => {
         <div className="laptop-mockup">
           {/* Placeholder for the laptop image */}
           <div className="screen-content">
-            <h4>WE DESIGN<br/>DIGITAL<br/>EXPERIENCES</h4>
+            <h4>
+              WE DESIGN <br /> AND <br /> DEVELOP
+            </h4>
           </div>
         </div>
       </div>

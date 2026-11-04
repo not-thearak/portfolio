@@ -49,7 +49,7 @@ const projectsData = [
   },
   {
     id: '03',
-    title: 'Movie App',
+    title: 'Movie App ( In Progress )',
     category: 'Entertainment Application',
     year: '2026',
     img: khfullhd,
@@ -64,6 +64,48 @@ const projectsData = [
     tech: ['Flutter', 'Dart'],
     links: { github: 'https://github.com/thearak/urbanic', live: 'https://urbanic-magazine.vercel.app' }
   },
+  //  {
+  //   id: '04',
+  //   title: 'Inventory API',
+  //   category: 'C# / .NET Backend',
+  //   year: '2026',
+  //   img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop',
+  //   featured: false,
+  //   description: 'A robust RESTful API built with C# and .NET Core to manage inventory for a mock e-commerce store. It handles product CRUD operations, user authentication, and order processing.',
+  //   features: [
+  //     'User authentication and role-based access control',
+  //     'CRUD operations for products and categories',
+  //     'Order management with status tracking',
+  //     'Integration with a SQL Server database',
+  //     'Swagger documentation for API endpoints'
+  //   ],
+  //   tech: ['C#', '.NET Core', 'SQL Server', 'Entity Framework', 'JWT Auth', 'Swagger'],
+  //   links: { github: 'https://github.com/thearak/urbanic', live: 'https://urbanic-magazine.vercel.app' }
+  // },
+    // {
+    // id: '04',
+    // slug: 'inventory-management-api',
+    // title: 'Inventory API',
+    // category: 'C# / .NET Backend',
+    // year: '2023',
+    // client: 'Personal Project',
+    // role: 'Backend Developer',
+    // duration: '2 Months',
+    // Use a screenshot of your Swagger UI, Postman, or VS Code here
+    // img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop', 
+    // featured: false,
+    // description: 'A robust RESTful API built with C# and .NET Core to manage inventory for a mock e-commerce store. It handles product CRUD operations, user authentication, and order processing.',
+    // challenge: 'Handling concurrent updates to inventory levels without causing data inconsistencies or deadlocks in the database.',
+    // solution: 'Implemented Entity Framework Core with optimistic concurrency control and utilized SQL Server transactions. Secured the API using JWT (JSON Web Tokens) for role-based access.',
+    // gallery: [
+      // Use screenshots of code, Swagger UI, or Database schema here
+    //   'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop',
+    //   'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop',
+    //   'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=800&auto=format&fit=crop'
+    // ],
+    // tech: ['C#', '.NET Core', 'SQL Server', 'Entity Framework', 'JWT Auth', 'Swagger'],
+    // links: 'https://github.com/yourusername/your-repo' 
+  // }
 
 ];
 

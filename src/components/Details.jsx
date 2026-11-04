@@ -60,27 +60,27 @@ const Details = () => {
           {[
             {
               id: '01',
-              title: 'Discover',
+              title: 'Plan',
               desc: 'Understanding goals, audience, and project requirements.',
             },
             {
               id: '02',
-              title: 'Ideate',
-              desc: 'Planning, wireframing, and creating the right concept.',
+              title: 'Requirements',
+              desc: 'Gathering and analyzing project needs for a clear roadmap.',
             },
             {
               id: '03',
               title: 'Design',
-              desc: 'Crafting visual design with a focus on user experience.',
+              desc: 'Creating wireframes, mockups, and prototypes for a visually appealing experience.',
             },
             {
               id: '04',
               title: 'Develop',
-              desc: 'Building fast, responsive, and high-performing websites.',
+              desc: 'Writing clean, efficient code to bring the design to life.',
             },
             {
               id: '05',
-              title: 'Deliver',
+              title: 'Deployment',
               desc: 'Testing, optimizing, and launching with perfection.',
             },
           ].map((step) => (

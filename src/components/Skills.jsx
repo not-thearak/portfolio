@@ -9,6 +9,13 @@ const skillsData = [
     skills: ['Web Design', 'UI/UX Design', 'Design Systems' ],
     icon: '✦'
   },
+  //  {
+  //   id: '02',
+  //   title: 'Backend & Systems', // <-- NEW CARD
+  //   description: 'Architecting robust server-side logic and databases.',
+  //   skills: ['C#', '.NET Core', 'SQL Server', 'REST APIs', 'Entity Framework'],
+  //   icon: '⚙'
+  // },
   {
     id: '02',
     title: 'Development',
