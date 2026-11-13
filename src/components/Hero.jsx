@@ -80,7 +80,8 @@ const Hero = () => {
                 <span className="accent-text ">NORTON University</span>
               </p>
             </div>
-            <div className="stat-item stagger-item">
+            
+            {/* <div className="stat-item stagger-item">
               <h2>
                 4<span className="accent-text">+</span>
               </h2>
@@ -89,7 +90,7 @@ const Hero = () => {
                 <br />
                 Completed
               </p>
-            </div>
+            </div> */}
             {/* <div className="stat-item stagger-item">
               <h2>
                 20<span className="accent-text">+</span>
